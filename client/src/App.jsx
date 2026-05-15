@@ -29,11 +29,21 @@ const App = () => {
     checkAuth()
 
   },[])
-  if(loading){
-    return (
-      <div className='flex justify-center items-center'>Loading......</div>
-    )
-  }
+ if (loading) {
+  return (
+    <div className="min-h-screen flex flex-col justify-center items-center bg-gray-50">
+      
+      {/* Spinner */}
+      <div className="w-12 h-12 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
+
+      {/* Text */}
+      <p className="mt-4 text-gray-600 text-sm tracking-wide">
+        Loading, please wait...
+      </p>
+
+    </div>
+  );
+}
   return (
     <div className="bg-[url('/bgimage.svg')] bg-contain">
      <Routes>
