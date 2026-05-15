@@ -11,12 +11,12 @@ const app =express();
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use(cors({origin:"http://localhost:5173",
-    credentials: true}));
+app.use(cors());
 
 connectDb();
 app.use('/api/auth',routes);
 app.use('/api/users',router)
-app.listen(process.env.PORT,()=>{
+const PORT=process.env.PORT || 3000;
+app.listen(PORT,()=>{
     console.log("server running")
 });
