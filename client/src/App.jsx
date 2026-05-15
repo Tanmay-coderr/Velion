@@ -35,7 +35,7 @@ const App = () => {
     )
   }
   return (
-    <div className="bg-[url('./src/assets/bgImage.svg')] bg-contain">
+    <div className="bg-[url('/bgImage.svg')] bg-contain">
      <Routes>
         <Route path='/' element={user ? <HomePage user={user} setUser={setUser} /> : <Navigate to="/login" replace />} />
         <Route path='/login' element={!user ? <AuthPage setUser={setUser} /> : <Navigate to="/" replace />} />
