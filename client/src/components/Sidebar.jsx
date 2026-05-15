@@ -10,7 +10,7 @@ const Sidebar = ({ selectedUser, setSelectedUser,setUser,user }) => {
     ()=>{
       const fetchUsers=async()=>{
         try {
-          const res = await axios.get("http://localhost:3000/api/users",{
+          const res = await axios.get("https://velion-ea66.onrender.com/api/users",{
             withCredentials:true
           });
           setUsers(res.data.users);

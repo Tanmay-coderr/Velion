@@ -24,8 +24,8 @@ const AuthPage = ({setUser}) => {
 
     try {
       const url = isLogin
-        ? 'http://localhost:3000/api/auth/login'
-        : 'http://localhost:3000/api/auth/register'
+        ? 'https://velion-ea66.onrender.com/api/auth/login'
+        : 'https://velion-ea66.onrender.com/api/auth/register'
 
       const { data } = await axios.post(url, formData,{
         withCredentials:true  //this line sends the cookie to the post request

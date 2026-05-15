@@ -15,7 +15,7 @@ const App = () => {
   useEffect(()=>{
     const checkAuth=async()=>{
       try {
-        const res=await axios.get("http://localhost:3000/api/auth/me");
+        const res=await axios.get("https://velion-ea66.onrender.com/api/auth/me");
         setUser(res.data.user);
         
       } catch (error) {
