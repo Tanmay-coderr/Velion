@@ -45,7 +45,7 @@ const App = () => {
   );
 }
   return (
-    <div className="bg-[url('/bgimage.svg')] bg-contain">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950">
      <Routes>
         <Route path='/' element={user ? <HomePage user={user} setUser={setUser} /> : <Navigate to="/login" replace />} />
         <Route path='/login' element={!user ? <AuthPage setUser={setUser} /> : <Navigate to="/" replace />} />
