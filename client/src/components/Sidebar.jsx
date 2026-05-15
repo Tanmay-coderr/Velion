@@ -23,7 +23,7 @@ const Sidebar = ({ selectedUser, setSelectedUser,setUser,user }) => {
     fetchUsers()}
     ,[])
   const handleLogout=async()=>{
-      await axios.post("http://localhost:3000/api/auth/logout",{},{
+      await axios.post("https://velion-ea66.onrender.com/api/auth/logout",{},{
         withCredentials:true
       })
       setUser(null);
